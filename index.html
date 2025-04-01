@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook - M04</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 20px;
+        }
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .banner {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        .banner .title {
+            font-size: 1.2em;
+            display: flex;
+            justify-content: space-between;
+        }
+        .banner .subtitle {
+            font-size: 1em;
+            margin-top: 5px;
+            border-top: 1px solid white;
+            padding-top: 5px;
+        }
+        .content {
+            display: none;
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+        }
+        .step-title {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+        .dialogue {
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px 0;
+            text-align: right;
+            font-style: italic;
+        }
+        .dropdown {
+            margin-bottom: 20px;
+        }
+        .dropdown select {
+            font-size: 1em;
+            padding: 5px;
+            margin-left: 10px;
+        }
+        table { width: 100%; border-collapse: collapse; }
+        td { padding: 8px; border: 1px solid #ddd; vertical-align: top; }
+         img.innovation-image {
+            max-width: 400px; /* Adjust as needed */
+            height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        code { background-color: #eee; padding: 2px 5px; border-radius: 3px; font-family: monospace;}
+        .recipe { border: 2px solid #4CAF50; padding: 15px; margin: 15px 0; border-radius: 10px; background-color: #e9f5e9; }
+        .recipe h4 { margin-top: 0; color: #4CAF50; }
+        .recipe ul { padding-left: 20px; }
+        .recipe li { margin-bottom: 5px; }
+    </style>
+    <script>
+        function updateActivities() {
+            var selectedTime = document.getElementById('time-select').value;
+            var activities = document.getElementsByClassName('activity');
+
+            document.getElementById('selected-time').innerText = "Tiempo efectivo de clase: " + selectedTime + " minutos";
+
+            for (var i = 0; i < activities.length; i++) {
+                activities[i].style.display = 'block';
+            }
+
+             // No "Innovación del Día" in this mission, so no specific hiding needed for 45/40 min yet.
+             // Time pressure will implicitly affect Brain Gym / Challenge for shorter durations.
+        }
+
+        function toggleContent(id) {
+            var content = document.getElementById(id);
+            if (content.style.display === "none") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+
+<div class="header">
+    <h1>Playbook - M04</h1>
+</div>
+
+<div class="container">
+    <div class="dropdown">
+        <label for="time-select">Tiempo efectivo de Clase:</label>
+        <select id="time-select" onchange="updateActivities()">
+            <option value="50">50 minutos</option>
+            <option value="45">45 minutos</option>
+            <option value="40">40 minutos</option>
+        </select>
+    </div>
+
+    <h2 id="selected-time" class="time-title">Tiempo efectivo de clase: 50 minutos</h2>
+
+<!-- -------------------------------------------------Espacio para Actividades --------------------------------------------------------- -->
+
+<!-- Actividad 1 -->
+<div id="activity-1" class="activity">
+    <div class="banner" onclick="toggleContent('pregunta_activadora')">
+        <div class="title">🎉 Actividad 1: Pregunta Activadora ⏰ Tiempo: 3 minutos</div>
+        <div class="subtitle">¿Instrucciones claras = Resultados claros?</div>
+    </div>
+    <div id="pregunta_activadora" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (0.5 minutos):</strong> Proyectar Diapositiva 2 "Pregunta Activadora".</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "¡Qué onda, Genios! Vamos a empezar con algo que seguro les ha pasado. ¿Alguna vez le pidieron a alguien que hiciera algo, pero las instrucciones no fueron muy claras, y el resultado fue... digamos... inesperado o no lo que querían?"</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 2 (2 minutos):</strong> Proyectar Diapositiva 3 "Intercambio de Ideas: El Poder de las Instrucciones".</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "Exacto. Pasa todo el tiempo. ¿Por qué creen que es tan importante dar instrucciones claras y detalladas, ya sea a un compañero de equipo, a un empleado, o incluso... a una máquina? ¿Qué pasa cuando las instrucciones son vagas o ambiguas? Compartan alguna experiencia o reflexión. ¿Alguien ha tenido un malentendido por instrucciones poco claras?... ¿Cómo se sintieron?... ¿Qué aprendieron de eso?... ¿Creen que las máquinas necesitan instrucciones aún más precisas que los humanos?"</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 3 (0.5 minutos):</strong> Proyectar Diapositiva 4 "I Can Statement: El Horizonte de la Misión".</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "Interesantes puntos. Esa habilidad para dar instrucciones claras es justo lo que vamos a empezar a dominar hoy, pero aplicada a la IA. Al final de esta misión, podrán afirmar: 'Yo puedo definir qué es la Ingeniería de Prompts y aplicar la técnica de Instruction Prompting para dar instrucciones claras y obtener mejores respuestas de la IA.' ¡Vamos a convertirnos en maestros de la comunicación con la inteligencia artificial!"</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 2: Brain Gym -->
+<div id="activity-2" class="activity">
+    <div class="banner" onclick="toggleContent('brain_gym')">
+        <div class="title">🧠 Actividad 2: Brain Gym ⏰ Tiempo: 30 minutos</div>
+        <div class="subtitle">Descifrando el Arte de Hablarle a la IA: Ingeniería de Prompts e Instruction Prompting.</div>
+    </div>
+    <div id="brain_gym" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (2 minutos):</strong> Proyectar Diapositiva 5 "¿Qué Rayos es la Ingeniería de Prompts?".</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "Muy bien, entremos en materia. Han oído hablar de ChatGPT, Gemini, Midjourney... herramientas de IA generativa que parecen hacer magia. Pero, ¿cómo le 'pedimos' a esa magia que haga exactamente lo que queremos? Ahí entra la *Ingeniería de Prompts*. No es tan complicado como suena. Piensen en esto: si le preguntan a un turista cómo llegar a un lugar específico en su ciudad, probablemente necesiten darle instrucciones muy detalladas, paso a paso, con puntos de referencia. Pero si le preguntan a un amigo que conoce la ciudad, tal vez baste con decirle 'nos vemos en el café de siempre'. La Ingeniería de Prompts es el arte y la ciencia de 'hablarle' a la IA de la manera correcta, como si le diéramos las instrucciones perfectas a ese turista, para obtener el resultado preciso que buscamos. Es aprender el 'idioma' de la IA."</td>
+            </tr>
+             <tr>
+                <td><strong>PASO 2 (2 minutos):</strong> Proyectar Diapositiva 6 "¿Por Qué es Tan Importante?".</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "¿Y por qué dedicarle tiempo a esto? ¿No debería la IA simplemente entendernos? Bueno, estas IA son increíblemente poderosas, pero no leen la mente. Dependen totalmente de la *calidad* de la instrucción que les damos, del 'prompt'. Un prompt bien estructurado es como una receta detallada para un chef experto. Le dice qué ingredientes usar (el contexto), cómo combinarlos (las instrucciones), y cómo debe verse el plato final (el formato). Sin una buena receta, hasta el mejor chef puede entregar algo que no esperábamos. La Ingeniería de Prompts nos permite: 1) Pasar de ideas vagas a resultados concretos. 2) Evitar errores o respuestas irrelevantes. 3) Lograr que la IA haga tareas complejas (escribir código, crear imágenes, redactar textos) con resultados mucho más pulidos y útiles desde el principio."</td>
+            </tr>
+             <tr>
+                <td><strong>PASO 3 (2 minutos):</strong> Proyectar Diapositiva 7 "Anatomía de un Prompt: Simple vs. Complejo".</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "Entonces, ¿qué es un 'prompt'? Es simplemente la *entrada* o la *instrucción* que le damos al modelo de IA. Puede ser algo tan simple como una pregunta: '¿Cuál es la capital de Francia?'. O puede ser algo mucho más complejo, como: 'Escribe un poema de 12 líneas al estilo de Edgar Allan Poe sobre un programador solitario que se enfrenta a un bug imposible en una noche de tormenta, usando rima AABB'. La diferencia en la respuesta será abismal. La calidad, el detalle y la estructura de nuestro prompt determinan directamente la calidad de la respuesta de la IA. Es como la diferencia entre decir 'cuéntame un cuento' y 'cuéntame un cuento de misterio sobre un gato detective que vive en Nueva York en los años 40'."</td>
+            </tr>
+             <tr>
+                <td><strong>PASO 4 (2.5 minutos):</strong> Proyectar Diapositiva 8 "Refinando Prompts: El Caso del Robot Juguetón".</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "Veamos un ejemplo muy básico. Imaginen que tienen un robot de juguete que cuenta historias. Si le dicen 'Cuéntame una historia', podría contarles cualquier cosa. Pero si quieren una historia específica, necesitan ser más claros. Si quieren una historia graciosa sobre un gato, el prompt 'Cuéntame una historia graciosa sobre un gato' es mucho mejor. Este proceso de ajustar y mejorar el prompt se llama *refinamiento*, y es el corazón de la Ingeniería de Prompts. A veces, la IA no da el resultado deseado a la primera, y nuestro trabajo es iterar, ajustar el prompt, añadir detalles, hasta que la IA 'entienda' exactamente lo que queremos. Es un diálogo, una negociación con la máquina."</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 5 (3 minutos):</strong> Proyectar Diapositiva 9 "El Poder de la Claridad: El Problema de Matemáticas".</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "Aquí tenemos un ejemplo práctico del documento guía. Le pedimos a ChatGPT: '¿Cuánto es 923 * 99?'. Podría darnos la respuesta correcta, pero quizás no entendamos *cómo* llegó a ella. O, en problemas más complejos, podría equivocarse. Ahora, refinamos el prompt: '¿Cuánto es 923 * 99? Resuelve paso a paso. Escribe siempre el número completo de ceros para cada término.' (Se muestra la respuesta detallada de la IA). ¡Boom! Con estas instrucciones adicionales, no solo obtenemos la respuesta correcta (91,377), sino que la IA nos muestra su 'razonamiento'. ¿Por qué funciona esto? Porque los modelos de IA generativa aprenden patrones, no necesariamente lógica matemática pura. Al pedirle que vaya 'paso a paso' y sea explícito con los ceros, le estamos dando una estructura, un camino a seguir, que reduce la probabilidad de error y hace el proceso más transparente. Le estamos enseñando *cómo* pensar el problema."</td>
+            </tr>
+             <tr>
+                <td><strong>PASO 6 (2 minutos):</strong> Proyectar Diapositiva 10 "Técnica #1: Instruction Prompting - ¡Dando Órdenes!".</td>
+                 <td><strong>DIÁLOGO SUGERIDO:</strong> "Hoy nos vamos a enfocar en nuestra primera técnica fundamental: *Instruction Prompting*. Es la más directa. Se trata, simplemente, de dar instrucciones claras y directas al modelo de IA. Como un director de orquesta que le dice a cada músico exactamente qué tocar y cuándo. No le estamos dando ejemplos (eso lo veremos después), solo le estamos diciendo: 'Haz esto'. Es la base sobre la cual construiremos técnicas más complejas. Piensen en ello como dar una orden directa y precisa."</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 7 (2 minutos):</strong> Proyectar Diapositiva 11 "¿Por Qué Usar Instrucciones Directas?".</td>
+                 <td><strong>DIÁLOGO SUGERIDO:</strong> "¿Por qué es tan importante esta técnica? Primero, porque permite a los modelos de IA abordar tareas *nuevas* para las que no fueron entrenados específicamente. No necesitas miles de ejemplos de correos electrónicos de ventas para que la IA redacte uno, basta con darle la instrucción correcta. Segundo, es *flexible y escalable*. Puedes adaptar la misma técnica para tareas muy diferentes, desde formatear texto hasta evaluar ensayos. Tercero, ayuda a *mitigar errores*. Si la IA da una respuesta incorrecta, a menudo es porque la instrucción no fue clara. Ajustando la instrucción, podemos guiarla hacia el resultado correcto. Es como corregir el rumbo de un barco con pequeños ajustes en el timón."</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 8 (2.5 minutos):</strong> Proyectar Diapositiva 12 "Ejemplo 1: Formateando Nombres (Name Parsing)".</td>
+                 <td><strong>DIÁLOGO SUGERIDO:</strong> "Veamos un caso práctico. Imaginen que tienen una base de datos donde la gente introduce su nombre como quiere: 'Juan Pérez', 'Pérez, Juan', 'Juan Pérez García'. ¡Un caos! Quieren estandarizarlo al formato '[Apellido], [Nombre]'. Usando Instruction Prompting, le decimos a la IA: 'Un usuario ha introducido su nombre y apellido en un formulario. No sabemos en qué orden. Necesitamos que esté en este formato "[Apellido], [Nombre]". Por favor, convierte el siguiente nombre al formato esperado: John Smith'. (Mostrar resultado: 'Smith, John'). ¡Magia! La IA entendió la instrucción y aplicó el formato. ¡Intenten ustedes con nombres más complejos y vean si falla! Ese es un buen ejercicio para mejorar sus prompts."</td>
+            </tr>
+             <tr>
+                <td><strong>PASO 9 (3 minutos):</strong> Proyectar Diapositiva 13 "Ejemplo 2: Eliminando Información Sensible (PII)".</td>
+                 <td><strong>DIÁLOGO SUGERIDO:</strong> "Otro uso poderoso. Las empresas a menudo necesitan eliminar información personal identificable (PII) de documentos o correos. Nombres, teléfonos, emails... ¡Información sensible! Con Instruction Prompting, podemos automatizarlo. Le damos a la IA un correo de ejemplo (como el de Jimmy Smith en la guía) y le decimos: 'Lee el siguiente correo de ventas. Elimina cualquier información personal identificable (PII) y reemplázala con el marcador de posición apropiado. Por ejemplo, reemplaza el nombre "John Doe" con "[NAME]".' (Mostrar resultado con [NAME], [DEALERSHIP], [SALESPERSON], [PHONE NUMBER], [EMAIL ADDRESS]). Fíjense que la IA fue capaz de *extrapolar*. No le dijimos explícitamente que reemplazara 'Cheap Dealz' con '[DEALERSHIP]', pero entendió la instrucción general. ¡Ojo! Mucho cuidado al usar IA con datos sensibles, siempre hay riesgos de privacidad y posibles errores."</td>
+            </tr>
+              <tr>
+                 <td><strong>PASO 10 (3 minutos):</strong> Proyectar Diapositiva 14 "Ejemplo 3: Evaluación de Ensayos".</td>
+                 <td><strong>DIÁLOGO SUGERIDO:</strong> "Incluso podemos usar Instruction Prompting para tareas más subjetivas, como evaluar un ensayo. Le damos a la IA un fragmento de texto y criterios claros: 'Lee el siguiente extracto de ensayo y proporciona comentarios basados en los siguientes criterios: gramática, claridad, coherencia, calidad del argumento y uso de evidencia. Proporciona una puntuación del 1 al 10 para cada atributo, junto con el razonamiento de tu puntuación.' (Mostrar el extracto del ensayo sobre videojuegos y violencia). Y la IA devuelve una evaluación detallada, ¡como si fuera un revisor humano! (Mostrar la respuesta de la IA con las puntuaciones y razonamientos). Esto demuestra la flexibilidad de darle instrucciones precisas."</td>
+             </tr>
+             <tr>
+                 <td><strong>PASO 11 (3 minutos):</strong> Proyectar Diapositiva 15 "La Receta Secreta del Instruction Prompting".</td>
+                 <td><strong>DIÁLOGO SUGERIDO:</strong> "Hemos visto qué es y por qué funciona. Ahora, les daré mi 'receta secreta' simplificada para crear buenos Instruction Prompts. Son 4 ingredientes clave:
+                    <div class='recipe'>
+                        <h4>Receta Secreta: Instruction Prompting</h4>
+                        <ul>
+                            <li><strong>1. Verbo de Acción Claro (La Orden):</strong> Empieza con un verbo que indique *qué* quieres que haga la IA. Ej: 'Escribe', 'Resume', 'Traduce', 'Analiza', 'Compara', 'Genera'. Sé directo.</li>
+                            <li><strong>2. Especifica el Objeto/Contexto (El Qué/Sobre Qué):</strong> Dile a la IA *sobre qué* debe actuar. Ej: 'un correo electrónico', 'este artículo científico', 'la siguiente lista de nombres', 'el código Python adjunto'. Dale el material de trabajo.</li>
+                            <li><strong>3. Detalla el Resultado Esperado (El Cómo/Formato):</strong> Describe *cómo* quieres la respuesta. ¿En qué formato? ¿Con qué tono? ¿Con qué extensión? Ej: 'en formato de lista con viñetas', 'con un tono formal', 'en menos de 100 palabras', 'en una tabla con dos columnas'. Sé específico con el producto final.</li>
+                            <li><strong>4. Añade Restricciones o Refinamientos (Los Límites):</strong> Si es necesario, pon límites o condiciones. Ej: 'evita usar jerga técnica', 'enfócate en los beneficios para el cliente', 'incluye al menos 3 ejemplos', 'no menciones precios'. Define las reglas del juego.</li>
+                        </ul>
+                    </div>
+                    Si siguen estos 4 pasos, sus instrucciones serán mucho más claras y las respuestas de la IA, mucho mejores. ¡Es su primera receta de Ingeniero de Prompts!"</td>
+             </tr>
+            <tr>
+                 <td><strong>PASO 12 (1 minuto):</strong> Proyectar Diapositiva 16 "Conclusión del Brain Gym".</td>
+                 <td><strong>DIÁLOGO SUGERIDO:</strong> "En resumen, Genios, la Ingeniería de Prompts es esencial para desbloquear el verdadero potencial de la IA. Y la técnica de Instruction Prompting, basada en dar órdenes claras y directas siguiendo nuestra 'receta', es el primer paso fundamental. Al dominar cómo dar instrucciones precisas, ustedes toman el control y guían a la IA para que trabaje *para* ustedes, entregando resultados valiosos y relevantes. ¡Están listos para dar sus primeras órdenes!"</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 3: Challenge -->
+<div id="activity-3" class="activity">
+    <div class="banner" onclick="toggleContent('challenge')">
+        <div class="title">🚀 Actividad 3: Challenge ⏰ Tiempo: 15 minutos</div>
+        <div class="subtitle">¡De Vago a Preciso! Experimentando con Instrucciones.</div>
+    </div>
+    <div id="challenge" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (1 minuto):</strong> Proyectar Diapositiva 17 "Título del Challenge: ¡De Vago a Preciso!".</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "¡Ahora a la acción! Es hora de poner a prueba nuestra 'Receta Secreta' de Instruction Prompting. En este Challenge, van a experimentar la diferencia radical entre un prompt vago y uno con instrucciones claras y directas. ¡Prepárense para ver el poder de la precisión!"</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 2 (2 minutos):</strong> Proyectar Diapositiva 18 "Instrucciones del Challenge y Pares de Prompts".</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "Van a trabajar individualmente. Les daré 3 pares de prompts. Cada par tiene una versión 'vaga' y una versión 'precisa' (usando Instruction Prompting). Su tarea es probar *ambos* prompts de cada par en ChatGPT o Gemini y comparar las respuestas que obtienen. Fíjense en la calidad, la relevancia, el formato, ¡todo! Aquí están los pares:
+                    <ol>
+                        <li><strong>Marketing:</strong><br>
+                            *   Prompt Vago: <code>'Ideas para marketing de una nueva app de fitness.'</code><br>
+                            *   Prompt Preciso: <code>'Genera una lista con 5 ideas de marketing digital concretas para lanzar una nueva app de fitness dirigida a jóvenes adultos (18-30 años) en México. Enfócate en estrategias de redes sociales (Instagram y TikTok) y marketing de influencers. Presenta cada idea con un título y una breve descripción (2-3 frases).'</code></li>
+                        <li><strong>Email:</strong><br>
+                            *   Prompt Vago: <code>'Escribe un email.'</code><br>
+                            *   Prompt Preciso: <code>'Redacta un correo electrónico formal para el equipo de ventas informando sobre la nueva meta trimestral de $500,000 MXN. Menciona la importancia del trabajo en equipo y ofrece una sesión de preguntas y respuestas la próxima semana. Usa un tono motivador pero profesional. El asunto debe ser "Nueva Meta de Ventas Q3".'</code></li>
+                        <li><strong>Explicación Técnica:</strong><br>
+                            *   Prompt Vago: <code>'Explica qué es la API REST.'</code><br>
+                            *   Prompt Preciso: <code>'Explica el concepto de API REST a un estudiante de negocios sin conocimientos técnicos previos. Usa una analogía simple (como un mesero en un restaurante) para ilustrar cómo funciona. Limita la explicación a 3 párrafos cortos y evita usar acrónimos técnicos sin definirlos primero.'</code></li>
+                    </ol>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>PASO 3 (7 minutos):</strong> Proyectar Diapositiva 19 "¡A Probar y Comparar!".</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "Tienen 7 minutos para probar estos 6 prompts (3 pares) en la IA de su elección. Copien y peguen cada uno, ejecútenlos y observen detenidamente las respuestas. Tomen notas mentales o escritas: ¿Cuál prompt dio una respuesta más útil? ¿Más específica? ¿Más alineada con lo que (implícitamente) se buscaba? ¿Por qué creen que funcionó mejor el prompt preciso?"</td>
+            </tr>
+             <tr>
+                <td><strong>PASO 3.1 (0 minutos):</strong> Proyectar Diapositiva 20 "Cronómetro: 7 minutos."</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "N/A."</td>
+             </tr>
+             <tr>
+                <td><strong>PASO 4 (3 minutos):</strong> Proyectar Diapositiva 21 "Compartiendo Descubrimientos".</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "¡Tiempo! Ahora, compartan brevemente con un compañero cercano o en grupos pequeños: ¿Qué diferencias notables encontraron entre las respuestas de los prompts vagos y los precisos en cada par? ¿Hubo algún caso donde el prompt vago les sorprendió para bien o para mal? ¿Qué elemento de la 'receta' (Verbo, Contexto, Resultado, Restricciones) creen que marcó la mayor diferencia en los prompts precisos?"</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 5 (1 minuto):</strong> Proyectar Diapositiva 22 "Reflexión del Challenge".</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "Este ejercicio nos demuestra de forma práctica que la manera en que 'pedimos' las cosas a la IA cambia drásticamente el resultado. Dar instrucciones claras, específicas y estructuradas no es opcional, es *fundamental* para obtener respuestas de alta calidad. Han dado su primer paso como Ingenieros de Prompts."</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 6 (0.5 minutos):</strong> Proyectar Diapositiva 23 "I Can Statement: Challenge Superado".</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "Revisitemos nuestro objetivo: 'Yo puedo definir qué es la Ingeniería de Prompts y aplicar la técnica de Instruction Prompting para dar instrucciones claras y obtener mejores respuestas de la IA.' Después de este Brain Gym y este Challenge, ¿sienten que pueden hacerlo? ¡Exacto! Han probado y comprobado el poder de las instrucciones claras."</td>
+            </tr>
+            <tr>
+                <td><strong>PASO 7 (0.5 minutos):</strong> Proyectar Diapositiva 24 "You've got Mon-e: Recompensa por la Precisión".</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "Su habilidad para dar instrucciones precisas merece un reconocimiento. ¡Reciban su Mon-e!"</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 4: Mission Notes -->
+<div id="activity-4" class="activity">
+    <div class="banner" onclick="toggleContent('mission_notes')">
+        <div class="title">📝 Actividad 4: Mission Notes ⏰ Tiempo: 2 minutos</div>
+        <div class="subtitle">Anotando la Receta y Preparando el Siguiente Plato.</div>
+    </div>
+    <div id="mission_notes" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (2 minutos):</strong> Proyectar Diapositiva 25 "Elaboración de Mission Notes".</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> "Para cerrar nuestra misión de hoy, tomen un momento para sus 'Mission Notes'. Anoten los 4 pasos de la 'Receta Secreta' del Instruction Prompting. ¿Qué les pareció esta primera técnica? ¿En qué situaciones creen que podrían aplicarla en su día a día o en sus estudios? Piensen en una tarea que les gustaría intentar automatizar o mejorar usando Instruction Prompting. Estas notas son su primer capítulo en el manual del Ingeniero de Prompts. En la próxima misión, pondremos esta técnica en práctica con un desafío más profundo. ¡Prepárense para seguir cocinando con IA!"</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- -------------------------------------------------Espacio para Actividades --------------------------------------------------------- -->
+
+</div>
+
+</body>
+</html>
